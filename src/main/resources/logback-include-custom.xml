@@ -1,0 +1,3 @@
+<included>
+	<logger name="org.lctmicro.weather" level="DEBUG" />
+</included>

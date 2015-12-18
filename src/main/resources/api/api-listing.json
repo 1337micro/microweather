@@ -1,0 +1,14 @@
+{
+    "name": "hybris Service",
+    "references":[
+        {
+            "namespace": "api",
+            "description": "API definition of weather",
+            "path": "/",
+            "type": "raml",
+            "fileName": "weather.raml",
+            "packageName": "org.lctmicro.weather.api.generated",
+            "async": false
+        }
+    ]
+}
