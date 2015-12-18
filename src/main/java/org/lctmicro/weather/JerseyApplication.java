@@ -4,16 +4,15 @@
 package org.lctmicro.weather;
 
 import com.sap.cloud.yaas.servicesdk.apiconsole.web.ApiConsoleFeature;
-import com.sap.cloud.yaas.servicesdk.jerseysupport.features.JsonFeature;
-import com.sap.cloud.yaas.servicesdk.jerseysupport.features.JerseyFeature;
-import com.sap.cloud.yaas.servicesdk.jerseysupport.features.SecurityFeature;
 import com.sap.cloud.yaas.servicesdk.jerseysupport.features.BeanValidationFeature;
+import com.sap.cloud.yaas.servicesdk.jerseysupport.features.JerseyFeature;
+import com.sap.cloud.yaas.servicesdk.jerseysupport.features.JsonFeature;
+import com.sap.cloud.yaas.servicesdk.jerseysupport.features.SecurityFeature;
 import com.sap.cloud.yaas.servicesdk.jerseysupport.logging.RequestResponseLoggingFilter;
-
 import org.glassfish.jersey.server.ResourceConfig;
+import org.lctmicro.weather.api.generated.ApiFeature;
 import org.slf4j.LoggerFactory;
 
-import org.lctmicro.weather.api.generated.ApiFeature;
 
 /**
  * Defines the REST application.
