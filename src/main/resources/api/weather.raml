@@ -3,13 +3,9 @@ title: hybris Service Archetype
 baseUri: http://localhost/
 version: v1
 mediaType:  application/json
-
 schemas:
-  - wishlists: !include wishlists.json
-  - wishlist: !include wishlist.json
-  - wishlistItem: !include wishlistItem.json
-  - error: !include https://api.yaas.io/patterns/v1/schema-error-message.json
-
+  - weather: !include weather.json
+  - city: !include wcity.json
 traits:
   - !include https://api.yaas.io/patterns/v2/trait-yaas-aware.yaml
 
@@ -17,43 +13,27 @@ resourceTypes:
   - !include https://api.yaas.io/patterns/v2/resource-type-element.yaml
   - !include https://api.yaas.io/patterns/v1/resource-type-collection.yaml
 
-/wishlists:
+/weather:
   type: collection
   is: [yaasAware]
   get:
-    description: Gets all wishlists
-    responses:
-      200:
-        body:
-          application/json:
-            example: !include wishlists-example.json
-  post:
-    description: Creates a new wishlist
-    body:
-      application/json:
-        example: !include wishlist-example.json
-
-  /{wishlistId}:
+      description: get the weather for the given city
+      responses:
+        200:
+          body:
+            application/json
+  /{city}:
     type: element
     is: [yaasAware]
     uriParameters:
-      wishlistId:
-        description: the id of the wishlist to work on
-        example: 784hti8ey
+      city:
+        description: the name of the city
+        example: Montreal
         type: string
     get:
-      description: Gets a wishlist
+      description: get the weather for the given city
       responses:
         200:
           body:
             application/json:
-              example: !include wishlist-example.json
-
-    put:
-      description: Updates a wishlist
-      body:
-        application/json:
-          example: !include wishlist-example.json
-
-    delete:
-      description: Deletes a wishlist
+              example: wcity

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="odata4j-0.7.0-clientbundle">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/resources/odata4j-0.7.0-clientbundle.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
